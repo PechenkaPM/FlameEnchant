@@ -22,8 +22,7 @@ use Pechenka\flame\FlameEnchant;
  * Class EventListener
  * @package Pechenka\flame\events
  */
-class EventListener implements Listener
-{
+class EventListener implements Listener {
 
     /**
      * @var FlameEnchant
@@ -34,16 +33,14 @@ class EventListener implements Listener
      * EventListener constructor.
      * @param FlameEnchant $plugin
      */
-    public function __construct(FlameEnchant $plugin)
-    {
+    public function __construct(FlameEnchant $plugin) {
         self::$instance = $plugin;
     }
 
     /**
      * @return FlameEnchant
      */
-    private static function getPlugin() //ненужная функция, можете убрать ее, ошибок не будет, возможно кто-то захочет допилить зачарования и ему она пригодится.
-    {
+    private static function getPlugin() { //ненужная функция, можете убрать ее, ошибок не будет, возможно кто-то захочет допилить зачарования и ему она пригодится.
         return self::$instance;
     }
 
@@ -51,8 +48,7 @@ class EventListener implements Listener
      * @param EntityDamageEvent $event
      * @ignoreCancelled false
      */
-    public function swordFlame(EntityDamageEvent $event)
-    {
+    public function swordFlame(EntityDamageEvent $event) {
         $player = $event->getEntity();
         if ($player instanceof Player) {
             if ($event instanceof EntityDamageByEntityEvent) {
@@ -71,8 +67,7 @@ class EventListener implements Listener
      * @param EntityShootBowEvent $event
      * @ignoreCancelled false
      */
-    public function bowFlame(EntityShootBowEvent $event)
-    {
+    public function bowFlame(EntityShootBowEvent $event) {
         $entity = $event->getProjectile();
         if (!is_null(($bow = $event->getBow())) && $bow->hasEnchantment(Enchantment::FLAME)) {  //Flame
             $entity->setOnFire(777);
