@@ -46,7 +46,7 @@ class EventListener implements Listener {
 
     /**
      * @param EntityDamageEvent $event
-     * @ignoreCancelled false
+     * @ignoreCancelled true
      */
     public function swordFlame(EntityDamageEvent $event) {
         $player = $event->getEntity();
@@ -65,7 +65,7 @@ class EventListener implements Listener {
 
     /**
      * @param EntityShootBowEvent $event
-     * @ignoreCancelled false
+     * @ignoreCancelled true
      */
     public function bowFlame(EntityShootBowEvent $event) {
         $entity = $event->getProjectile();
