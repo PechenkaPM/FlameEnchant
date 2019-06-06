@@ -55,7 +55,7 @@ class EventListener implements Listener {
                 $damager = $event->getDamager();
                 if ($damager instanceof Player) {
                     $item = $damager->getInventory()->getItemInHand();
-                    if ($item->hasEnchantment(Enchantment::FIRE_ASPECT)) {    //Fire Aspect
+                    if ($item->hasEnchantment(Enchantment::FIRE_ASPECT)) {    
                         $player->setOnFire(3);
                     }
                 }
@@ -69,7 +69,7 @@ class EventListener implements Listener {
      */
     public function bowFlame(EntityShootBowEvent $event) {
         $entity = $event->getProjectile();
-        if (!is_null(($bow = $event->getBow())) && $bow->hasEnchantment(Enchantment::FLAME)) {  //Flame
+        if (!is_null(($bow = $event->getBow())) && $bow->hasEnchantment(Enchantment::FLAME)) { 
             $entity->setOnFire(777);
         }
     }
