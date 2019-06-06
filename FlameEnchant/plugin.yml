@@ -1,0 +1,7 @@
+main: Pechenka\flame\FlameEnchant
+api: [3.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4, 3.0.0-ALPHA6]
+version: 1.0
+
+name: FlameEnchant
+author: 3P
+website: vk.com/vovan446
