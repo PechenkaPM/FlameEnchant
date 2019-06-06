@@ -17,11 +17,9 @@ use Pechenka\flame\events\EventListener;
  * Class FlameEnchant
  * @package Pechenka\flame
  */
-class FlameEnchant extends PluginBase
-{
+class FlameEnchant extends PluginBase {
 
-    public function onEnable()
-    {
+    public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
         $this->getLogger()->info("Плагин FlameEnchant был успешно включен! Автор - 3P: vk.com/vovan446");
     }
