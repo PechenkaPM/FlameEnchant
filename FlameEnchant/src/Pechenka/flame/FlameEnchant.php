@@ -36,7 +36,8 @@ class FlameEnchant extends PluginBase implements Listener{
                 if ($damager instanceof Player) {
                     $item = $damager->getInventory()->getItemInHand();
                     if ($item->hasEnchantment(Enchantment::FIRE_ASPECT)) {
-                        $player->setOnFire(3);
+                        //зачар добавляет по 4 секунды горения на каждом уровне (minecraft wiki)
+                        $player->setOnFire(4 * $item->getEnchantment(Enchantment::FIRE_ASPECT)->getLevel());
                     }
                 }
             }
