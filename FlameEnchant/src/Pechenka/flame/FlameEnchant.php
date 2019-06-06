@@ -31,7 +31,6 @@ class FlameEnchant extends PluginBase implements Listener{
 
     /**
      * @param EntityDamageEvent $event
-     * @ignoreCancelled false
      */
     public function swordFlame(EntityDamageEvent $event) {
         $player = $event->getEntity();
@@ -50,7 +49,6 @@ class FlameEnchant extends PluginBase implements Listener{
 
     /**
      * @param EntityShootBowEvent $event
-     * @ignoreCancelled false
      */
     public function bowFlame(EntityShootBowEvent $event) {
         $entity = $event->getProjectile();
