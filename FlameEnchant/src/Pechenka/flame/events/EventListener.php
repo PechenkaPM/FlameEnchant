@@ -12,6 +12,7 @@ namespace Pechenka\flame\events;
 
 use pocketmine\event\Listener;
 use pocketmine\Player;
+use pocketmine\item\Enchantment;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityShootBowEvent;
@@ -58,7 +59,7 @@ class EventListener implements Listener
                 $damager = $event->getDamager();
                 if ($damager instanceof Player) {
                     $item = $damager->getInventory()->getItemInHand();
-                    if ($item->hasEnchantment(13)) {    //Fire Aspect
+                    if ($item->hasEnchantment(Enchantment::FIRE_ASPECT)) {    //Fire Aspect
                         $player->setOnFire(3);
                     }
                 }
@@ -73,7 +74,7 @@ class EventListener implements Listener
     public function bowFlame(EntityShootBowEvent $event)
     {
         $entity = $event->getProjectile();
-        if (!is_null(($bow = $event->getBow())) && $bow->hasEnchantment(21)) {  //Flame
+        if (!is_null(($bow = $event->getBow())) && $bow->hasEnchantment(Enchantment::FLAME)) {  //Flame
             $entity->setOnFire(777);
         }
     }
