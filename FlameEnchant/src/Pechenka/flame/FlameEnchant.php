@@ -34,7 +34,7 @@ class FlameEnchant extends PluginBase {
     /**
      * @return FlameEnchant
      */
-    private static function getPlugin() { //ненужная функция, можете убрать ее, ошибок не будет, возможно кто-то захочет допилить зачарования и ему она пригодится.
+    public static function getPlugin() { //ненужная функция, можете убрать ее, ошибок не будет, возможно кто-то захочет допилить зачарования и ему она пригодится.
         return self::$instance;
     }
 }
