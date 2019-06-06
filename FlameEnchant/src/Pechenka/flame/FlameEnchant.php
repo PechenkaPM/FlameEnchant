@@ -24,23 +24,9 @@ use pocketmine\plugin\PluginBase;
  */
 class FlameEnchant extends PluginBase implements Listener{
 
-    /**
-     * @var FlameEnchant
-     */
-    private static $instance;
-
-
     public function onEnable() {
-        self::$instance = $this;
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info("Плагин FlameEnchant был успешно включен! Автор - 3P: vk.com/vovan446");
-    }
-
-    /**
-     * @return FlameEnchant
-     */
-    public static function getPlugin() { //ненужная функция, можете убрать ее, ошибок не будет, возможно кто-то захочет допилить зачарования и ему она пригодится.
-        return self::$instance;
     }
 
     /**
