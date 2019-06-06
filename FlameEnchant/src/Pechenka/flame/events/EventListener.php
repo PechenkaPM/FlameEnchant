@@ -24,10 +24,6 @@ use Pechenka\flame\FlameEnchant;
  */
 class EventListener implements Listener {
 
-    /**
-     * @var FlameEnchant
-     */
-    private static $instance;
 
     /**
      * EventListener constructor.
@@ -37,12 +33,7 @@ class EventListener implements Listener {
         self::$instance = $plugin;
     }
 
-    /**
-     * @return FlameEnchant
-     */
-    private static function getPlugin() { //ненужная функция, можете убрать ее, ошибок не будет, возможно кто-то захочет допилить зачарования и ему она пригодится.
-        return self::$instance;
-    }
+
 
     /**
      * @param EntityDamageEvent $event
