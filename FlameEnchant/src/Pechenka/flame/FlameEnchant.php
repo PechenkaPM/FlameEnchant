@@ -18,10 +18,6 @@ use pocketmine\item\enchantment\Enchantment;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 
-/**
- * Class FlameEnchant
- * @package Pechenka\flame
- */
 class FlameEnchant extends PluginBase implements Listener{
 
     public function onEnable() {
