@@ -69,7 +69,7 @@ class EventListener implements Listener {
      */
     public function bowFlame(EntityShootBowEvent $event) {
         $entity = $event->getProjectile();
-        if (!is_null(($bow = $event->getBow())) && $bow->hasEnchantment(Enchantment::FLAME)) { 
+        if (($bow = $event->getBow()) !== null && $bow->hasEnchantment(Enchantment::FLAME)) { 
             $entity->setOnFire(777);
         }
     }
